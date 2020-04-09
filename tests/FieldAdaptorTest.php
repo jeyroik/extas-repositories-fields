@@ -4,6 +4,7 @@ use PHPUnit\Framework\TestCase;
 use extas\components\repositories\FieldAdaptorPlugin;
 use extas\components\repositories\FieldAdaptor;
 use extas\components\Item;
+use extas\interfaces\repositories\IFieldAdaptor;
 
 /**
  * Class PluginUuidFieldTest
@@ -25,13 +26,13 @@ class FieldAdaptorTest extends TestCase
             protected function getMarkers()
             {
                 return [
-                    new class () extends FieldAdaptor {
-                        function apply(string $value)
+                    new class () extends FieldAdaptor implements IFieldAdaptor {
+                        public function apply(string $value)
                         {
                             return 'ok';
                         }
 
-                        function isApplicable(string $value): bool
+                        public function isApplicable(string $value): bool
                         {
                             return $value == 'test';
                         }
