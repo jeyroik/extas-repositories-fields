@@ -53,4 +53,4 @@ class MyAdaptorPlugin extends \extas\components\repositories\FieldAdaptorPlugin
 В качестве примера можно посмотреть:
 
 - [extas-repositories-fields-sha1](https://github.com/jeyroik/extas-repositories-fields-sha1) позволяет автоматически шифровать значение с помощью sha1.
-- [extas-repositories-uuid-fields](https://github.com/jeyroik/extas-repositories-uuid-fields) позволяет генерировать uuid-строки для значения полей.
+- [extas-repositories-fields-uuid](https://github.com/jeyroik/extas-repositories-fields-uuid) позволяет генерировать uuid-строки для значения полей.
