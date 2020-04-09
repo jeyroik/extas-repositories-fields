@@ -31,7 +31,7 @@ class FieldAdaptorTest extends TestCase
                             return 'ok';
                         }
 
-                        function isApplicable(string $value)
+                        function isApplicable(string $value): bool
                         {
                             return $value == 'test';
                         }

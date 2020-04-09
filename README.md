@@ -16,7 +16,7 @@ class MyAdaptorPlugin extends \extas\components\repositories\FieldAdaptorPlugin
     {
         return [
             new class () extends \extas\components\repositories\FieldAdaptor {
-                public function isApplicable(string $value)
+                public function isApplicable(string $value): bool
                 {
                     // Проверяем подходит ли значение поля для адаптации.
                     return $value == 'my';
