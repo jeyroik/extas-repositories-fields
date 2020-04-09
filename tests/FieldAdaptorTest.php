@@ -12,6 +12,13 @@ use extas\components\Item;
  */
 class FieldAdaptorTest extends TestCase
 {
+    protected function setUp(): void
+    {
+        parent::setUp();
+        $env = \Dotenv\Dotenv::create(getcwd() . '/tests/');
+        $env->load();
+    }
+
     public function testApply()
     {
         $adaptor = new class() extends FieldAdaptorPlugin {
